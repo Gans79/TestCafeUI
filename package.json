@@ -1,0 +1,15 @@
+{
+  "name": "web-joe",
+  "version": "0.1.0",
+  "description": "Test Cafe UI",
+  "author": "Ganesh",
+  "dependencies": {
+    "dotenv": "^8.0.0",
+    "eslint-plugin-import": "^2.17.3"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "testcafe": "1.4.0",
+    "testcafe-reporter-html": "^1.4.4"
+  }
+}
