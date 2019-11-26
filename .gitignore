@@ -2,6 +2,5 @@ logs
 *.log
 npm-debug.log*
 node_modules
-.env*
 .idea
 *testcafe_report.html
