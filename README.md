@@ -9,6 +9,7 @@ These instructions will get you a copy of the project up and running on your loc
 #### Prerequisites
 
 - [Node](https://nodejs.org/en/) _(see [`.npmrc`](.npmrc) for version no)_
+- [Testcafe] npm install -g testcafe
 
 #### Installing
 
@@ -26,22 +27,7 @@ Open a command line of your choice and do the following:
    npm install
    ```
 
-3. Duplicate `.env.example` and name `.env`. Add an api key.
-
-
-### Visual Studio Code
-
-#### Settings
-
-If you're using Visual Studio Code (VSC), like most of us are, then the most crucial settings will be provided for you via [`.vscode/settings.json`](.vscode/settings.json).
-
-On top of our lint tooling ([ESLint](https://eslint.org/), [stylelint](https://stylelint.io/), [Prettier](https://prettier.io/), etc) this is an extra layer to ensure we're all writing highly consistent code and keeping our code reviews highly focused.
-
-#### Extensions
-
-In addition to [**Settings**](#settings), there are also suggestions for extensions that further bolster code consistency and to ensure our aforemention lint tooling can be as effecient as possible.
-
-
+3. Duplicate `.env.example` and name `.env`. Add an baseurl.
 
 ## TestCafe
 
@@ -53,24 +39,15 @@ In addition to [**Settings**](#settings), there are also suggestions for extensi
    BASE_URL=https://www.qantas.com/au/en.html
    ```
 
-2. Run tests: Execute with npm script:
+2. Run tests: All Tests
 
    ```bash
-   Execute all tests in all browsers: npm run testcafe
-   Execute all tests in chrome: npm run testcafe:chrome
-   Execute all tests in safari: npm run testcafe:safari
-   Execute all tests in headless mode: npm run testcafe:headless
+   Execute all tests in chrome: testcafe chrome tests/fixtures/**/*.test.js
+   Execute all tests in safari: testcafe safari tests/fixtures/**/*.test.js
    ```
 
-
-
-### Other Useful Commands
-
-- Execute specific test scenario:
+3. Run specific tests using TestID
 
   ```bash
-  testcafe <browser_name||all||headless> tests/**/*.test.js --test-meta testID=T* "TEST SCENARIO DESCRIPTION REGEX"
-
-  <Example>
-  testcafe chrome tests/**/*.test.js -T "BASE_URL='https://www.qantas.com/au/en.html' node_modules/.bin/testcafe chrome tests/fixtures --test-meta testID=T101 "
+  "BASE_URL='https://www.qantas.com/au/en.html' node_modules/.bin/testcafe chrome tests/fixtures --test-meta testID=T101 "
   ```
