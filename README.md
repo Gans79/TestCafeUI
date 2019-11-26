@@ -27,8 +27,6 @@ Open a command line of your choice and do the following:
    npm install
    ```
 
-3. Duplicate `.env.example` and name `.env`. Add an baseurl.
-
 ## TestCafe
 
 ### How to Run TestCafe
