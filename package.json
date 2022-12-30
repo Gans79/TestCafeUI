@@ -10,6 +10,6 @@
   "devDependencies": {
     "eslint": "^5.16.0",
     "testcafe": "1.4.0",
-    "testcafe-reporter-html": "^1.4.4"
+    "testcafe-reporter-html": "^1.4.6"
   }
 }
